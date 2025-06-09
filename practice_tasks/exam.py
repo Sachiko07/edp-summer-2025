@@ -36,6 +36,7 @@ emp3 = Employee("Jim", "003", "Cleaner")
 events = [["motion detected", {"location": "Cage ABC"}], ["dirty cage", {"location": "Cage A58"}], ["temperature_rise", {"location": "Cage ABC", "temp": "40"}]]
 
 event = random.choice(events)
+print(event)
 
 def run_event():
     if event == "motion detected":
@@ -45,6 +46,7 @@ def run_event():
     elif event == "temperature_rise":
         print(f"{emp1.name} is checking the cage temperature")
 
+run_event()
 
     
 
