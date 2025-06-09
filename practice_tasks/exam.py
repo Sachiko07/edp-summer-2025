@@ -1,6 +1,6 @@
 #Create an event driven Zoo-Keeping system
 
-from random import random
+import random
 
 security_channel = []
 zoo_keeper_channel = []
@@ -35,8 +35,16 @@ emp3 = Employee("Jim", "003", "Cleaner")
 
 events = [["motion detected", {"location": "Cage ABC"}], ["dirty cage", {"location": "Cage A58"}], ["temperature_rise", {"location": "Cage ABC", "temp": "40"}]]
 
-def create_event(name, payload):
-    return Event()
+event = random.choice(events)
+
+def run_event():
+    if event == "motion detected":
+        print(f"{emp1.name} is checking the cage")
+    elif event == "dirty cage":
+        print(f"{emp1.name} is cleaning the cage")
+    elif event == "temperature_rise":
+        print(f"{emp1.name} is checking the cage temperature")
+
 
     
 
